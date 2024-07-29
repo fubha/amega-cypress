@@ -1,0 +1,29 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint cypress/ cypress.config.js",
+    "lint:fix": "eslint cypress/ cypress.config.js --fix",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:headed": "cypress run --headed",
+    "cy:open:development": "ENV=development cypress open",
+    "cy:run:development": "ENV=development cypress run",
+    "cy:open:staging": "ENV=staging cypress open",
+    "cy:run:staging": "ENV=staging cypress run",
+    "cy:open:sandbox": "ENV=sandbox cypress open",
+    "cy:run:sandbox": "ENV=sandbox cypress run",
+    "cy:open:production": "ENV=production cypress open",
+    "cy:run:production": "ENV=production cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-cypress": "^3.4.0"
+  }
+}

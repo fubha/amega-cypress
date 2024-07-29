@@ -1,0 +1,65 @@
+{
+  /*
+    Configurations for Cypress ESLint Plugin
+    https://github.com/cypress-io/eslint-plugin-cypress
+  */
+  "root": true,
+
+  "plugins": [
+    "cypress"
+  ],
+
+  "env": {
+    "cypress/globals": true
+  },
+
+  "rules": {
+
+    /*
+      Cypress ESLint Rules
+      https://github.com/cypress-io/eslint-plugin-cypress/tree/master/docs/rules
+    */
+
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/no-async-tests": "error",
+    "cypress/no-pause": "error",
+    "cypress/no-force": "warn",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/unsafe-to-chain-command": "warn",
+    "cypress/require-data-selectors": "off",
+
+    /*
+      ESLint Rules
+      https://eslint.org/docs/latest/rules/
+    */
+
+    "new-cap":["error", {"capIsNew":false, "newIsCap":false}],
+    "comma-dangle":["error", "never"],
+    "brace-style": ["error", "1tbs"],
+    "func-names":"warn",
+    "no-multi-spaces":"error",
+    "no-console":"error",
+    "eol-last":["error", "never"],
+    "curly":["error", "multi-line"],
+    "vars-on-top":"warn",
+    "camelcase" : "error",
+    "indent":["error", "tab"],
+    "no-tabs": "off",
+    "one-var":"off",
+    "global-require": "error",
+    "max-len": ["error", 150, 2],
+    "no-param-reassign": "warn",
+    "no-unused-expressions":["off"],
+    "no-multi-str":"off",
+    "newline-per-chained-call": "warn",
+    "space-before-function-paren": ["error", "never"],
+    "object-curly-spacing": ["error", "always"],
+    "semi": "error",
+    "no-underscore-dangle": "off"
+  },
+
+  "extends": [
+    "plugin:cypress/recommended"
+  ]
+}
