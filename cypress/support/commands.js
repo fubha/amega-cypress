@@ -112,7 +112,8 @@ Cypress.Commands.add("interceptRoutes", () => {
 	cy.intercept("GET", Cypress.env("clientUrl") + "/profile").as("getProfile");
 	cy.intercept("GET", Cypress.env("clientUrl") + "/contest/list").as("getList");
 	cy.intercept("POST", Cypress.env("clientUrl") + "/cashback-breakdown").as("postCashbackBreakdown");
-	cy.intercept("GET", Cypress.env("baseUrl") + "/*/*/*/*/hub.json").as("getHub");
+	cy.intercept("POST", Cypress.env("clientUrl") + "/logout").as("postClientLogout");
+	cy.intercept("POST", Cypress.env("apiUrl") + "/auth/signout").as("postLogout");
 });
 
 Cypress.Commands.add("assertAPIResponse", (route, statusCode) => {

@@ -1,5 +1,5 @@
-import User from "../pages/login.page";
-import Dashboard from "../pages/dashboard.page";
+import User from "../../pages/login.page";
+import Dashboard from "../../pages/dashboard.page";
 
 const user = new User;
 const dashboard = new Dashboard;

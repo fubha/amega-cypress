@@ -4,7 +4,8 @@ const tabs = {
 	cashback: "#button-cashback",
 	hub: "#button-hub",
 	hubInfo: "#section-hub-info",
-	hubLogout: "#section-hub-logout"
+	hubLogout: "#section-hub-logout",
+	signOut: "#section-hub-logout button"
 };
 
 const username = Cypress.env("username");
@@ -19,8 +20,13 @@ export default class Dashboard {
 
 	openHub() {
 		cy.clickButtonWithText(data.hubTab, tabs.hub);
-		cy.assertAPIResponse("@getHub");
 		cy.containsText(username, tabs.hubInfo);
 		cy.containsText(data.logout, tabs.hubLogout);
+	}
+
+	logout() {
+		cy.clickButtonWithText(data.logout, tabs.signOut);
+		cy.assertAPIResponse("@postClientLogout");
+		cy.assertAPIResponse("@postLogout");
 	}
 }

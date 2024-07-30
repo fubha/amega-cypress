@@ -24,7 +24,6 @@ export default defineConfig({
 		// e2e: https://docs.cypress.io/guides/references/configuration#e2e
 		...environment,
 		specPattern: [ 
-			"cypress/e2e/login.spec.js",
 			"cypress/e2e/**/*.spec.js"
 		],
 		excludeSpecPattern: [],
