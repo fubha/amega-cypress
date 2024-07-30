@@ -15,7 +15,9 @@ describe("Cashback Tab", () => {
 	});
 
 	it("should open Cashback tab", () => {
+		user.openLoginPage();
 		user.login(username, password);
+		user.assertLoginSucces();
 		dashboard.openCashback();
 	});
 });

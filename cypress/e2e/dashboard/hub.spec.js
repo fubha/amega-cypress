@@ -15,7 +15,9 @@ describe("Hub Tab", () => {
 	});
 
 	it("should open Hub tab", () => {
+		user.openLoginPage();
 		user.login(username, password);
+		user.assertLoginSucces();
 		dashboard.openHub();
 	});
 
